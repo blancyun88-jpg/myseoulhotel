@@ -1,0 +1,726 @@
+@charset "utf-8";
+
+body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#mainVisual {
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 텍스트 */
+#mainVisual .txt_area {
+    opacity: 0;
+    position: absolute;
+    top: 235px;
+    width: 100%;
+    z-index: 1003;
+    text-align: center;
+    color: #fff;
+    font-family: 'Fraunces', 'Pretendard';
+    font-weight: 400
+}
+
+#mainVisual .txt01 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .9)
+}
+
+#mainVisual .txt01:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 82px;
+    height: 82px;
+    background: url('../img/intro/circle_bg.png') no-repeat center
+}
+
+#mainVisual .txt02 {
+    margin: 50px 0 50px;
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 84px
+}
+
+#mainVisual .txt03 {
+    font-size: 17px;
+    line-height: 180%;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Pretendard';
+}
+
+/* 이미지 */
+#mainVisual .main_img {
+    opacity: 0;
+    position: relative;
+    left: 20px;
+    z-index: 1001;
+    width: 100%;
+    height: 100vh;
+}
+
+#mainVisual .main_img li {
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/intro/main_banner_01.jpg') center no-repeat;
+    background-size: cover;
+    -webkit-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    transform: skewX(3deg);
+    -webkit-transition: all .4s;
+    transition: all .4s
+}
+
+#mainVisual .main_img li.img02 {
+    background-image: url('../img/intro/main_banner_02.jpg')
+}
+
+#mainVisual .main_img li.img03 {
+    background-image: url('../img/intro/main_banner_03.jpg')
+}
+
+#mainVisual .main_img li.on {
+    opacity: 1;
+    -webkit-transform: skewX(0);
+    -ms-transform: skewX(0);
+    transform: skewX(0);
+    -webkit-transition: all .8s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition: all .8s cubic-bezier(0.165, 0.840, 0.440, 1.000)
+}
+
+#mainVisual .main_img li.on p {
+    opacity: 1;
+    margin-left: 0;
+    -webkit-transition: all .6s;
+    transition: all .6s
+}
+
+#mainVisual .main_img li.on span {
+    opacity: 1;
+    margin-left: 0;
+    -webkit-transition: all .6s;
+    transition: all .6s
+}
+
+/* HEADER */
+header {
+    position: relative;
+    z-index: 15;
+    min-width: 1400px;
+    width: 100%;
+    font-family: 'Pretendard';
+    font-weight: 400
+}
+
+/* MAIN  */
+#main_banner {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+/* INDEX */
+#index_wrap {
+    position: relative;
+    z-index: 15;
+    font-size: 15px;
+    color: #777;
+    line-height: 160%;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+/* CONTAINER */
+#container {
+    position: relative;
+    width: 100%;
+    z-index: 0
+}
+
+#container_wrapper {
+    position: relative;
+    width: 100%;
+    zoom: 1
+}
+
+#container_wrapper:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+/* SUB */
+#sub_main_banner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    font-family: 'Pretendard';
+    font-weight: 400
+}
+
+
+/* fade  */
+.animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0)
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0)
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* resevation */
+
+#booking {
+    width: 100%;
+    /* Remove background color to let it float over content or be distinct */
+    background: transparent;
+    position: relative;
+    /* Negative margin to pull it up over the banner or just sit nicely */
+    margin-top: -60px;
+    z-index: 100;
+}
+
+#booking .book-wrap {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#booking .book-inner {
+    background: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    /* Slight rounding for modern feel */
+}
+
+#booking .booking-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#booking .field-group {
+    display: flex;
+    align-items: flex-start;
+    /* Align icon with top of text */
+    padding: 0 20px;
+    border-right: 1px solid #eee;
+    flex: 1;
+    /* Distribute space */
+}
+
+#booking .field-group:last-of-type {
+    border-right: none;
+}
+
+#booking .field-group i {
+    font-size: 20px;
+    color: #605c58;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+#booking .field-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#booking .field-content label {
+    display: block;
+    font-size: 13px;
+    /* Smaller, uppercase label */
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#booking .date-inputs,
+#booking .guest-selects {
+    display: flex;
+    align-items: center;
+}
+
+#booking input,
+#booking select {
+    border: none;
+    background: transparent;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    padding: 0;
+    height: auto;
+    cursor: pointer;
+    outline: none;
+}
+
+#booking input[type="text"],
+#booking input[type="date"] {
+    width: 110px;
+}
+
+#booking .divider {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+#booking select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('../img/icon/select_bk.png') no-repeat right center;
+    /* You might need a dark arrow icon */
+    background-size: 10px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+/* If specific select arrow not available, valid fallback: */
+#booking select {
+    background-image: none;
+    /* Reset if no dark icon file */
+}
+
+#booking .btn-search {
+    background: #605c58;
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    height: 60px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+#booking .btn-search:hover {
+    background: #484441;
+}
+
+/* Adjustments for inputs placeholder color */
+#booking ::placeholder {
+    color: #222;
+    opacity: 1;
+}
+
+/* section01 */
+
+#atc01 {
+    padding: 80px 0 0;
+    font-family: 'Fraunces', 'Pretendard';
+    font-weight: 400;
+}
+
+#atc01 .innerBox {
+    position: relative;
+    width: 100%;
+}
+
+#atc01 .inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#atc01 .s_eng {
+    margin-bottom: 32px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #aaa
+}
+
+#atc01 .txt_area {
+    overflow: hidden
+}
+
+#atc01 .txt_area .b_eng {
+    float: left;
+    font-size: 45px;
+    line-height: 48px;
+    font-weight: 800;
+    color: #222
+}
+
+#atc01 .txt_area .k_txt {
+    float: left;
+    padding: 4px 0 0 108px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #888
+}
+
+#atc01 .txt_area .view_btn {
+    overflow: hidden;
+    float: right;
+    position: relative;
+    margin-top: 12px;
+    padding: 0 12px 8px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #605c58;
+    transition: all .3s
+}
+
+#atc01 .txt_area .view_btn:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 158px;
+    height: 3px;
+    background: #e1e1e1
+}
+
+#atc01 .txt_area .view_btn:after {
+    position: absolute;
+    left: -158px;
+    bottom: 0;
+    content: '';
+    width: 158px;
+    height: 3px;
+    transition: all .3s;
+    background: #605c58
+}
+
+#atc01 .txt_area .view_btn i {
+    margin-left: 23px;
+    font-size: 12px
+}
+
+#atc01 .txt_area .view_btn:hover {
+    color: #222
+}
+
+#atc01 .txt_area .view_btn:hover:after {
+    left: 0
+}
+
+#atc01 .business_area {
+    overflow: hidden;
+    margin-top: 56px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#atc01 .business_area li {
+    width: 440px;
+    text-align: center;
+}
+
+section #atc01 .business_area li:nth-child(1) {
+    animation-delay: .0s
+}
+
+#atc01 .business_area li:nth-child(2) {
+    animation-delay: .3s
+}
+
+#atc01 .business_area li:last-child {
+    animation-delay: .6s
+}
+
+#atc01 .business_area li a {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Fraunces', 'Pretendard';
+    font-weight: 300
+}
+
+#atc01 .business_area li a span {
+    display: block;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 500
+}
+
+#atc01 .business_area li .img {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 33px;
+    height: 470px;
+    border-radius: 250px 250px 0 0;
+}
+
+#atc01 .business_area li img {
+    width: 100%;
+    transition: all .6s ease-in-out;
+}
+
+#atc01 .business_area li:hover img {
+    transform: scale(1.1);
+}
+
+#atc01 .bg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    background: url('../img/intro/img_bg.jpg')
+}
+
+#atc03 {
+    width: 1400px;
+    margin: 0 auto;
+    font-family: 'Fraunces', 'Pretendard';
+    font-weight: 400;
+    padding-bottom: 120px;
+}
+
+#atc03 .tit_area {
+    padding: 120px 0 60px 0;
+    text-align: center
+}
+
+#atc03 .s_eng {
+    font-size: 17px;
+    font-weight: 800;
+    color: #605c58
+}
+
+#atc03 .b_eng {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 800;
+    color: #222
+}
+
+#atc03 .dining_list {
+    animation-delay: .3s;
+    width: 100%;
+}
+
+#atc03 .dining_list ul {
+    overflow: hidden;
+}
+
+#atc03 .dining_list ul li {
+    float: left;
+    width: calc(100% / 3)
+}
+
+#atc03 .dining_list ul li .img_wrap {
+    position: relative
+}
+
+#atc03 .dining_list ul li .img_wrap:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #484441 0, transparent 60%);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    opacity: 0
+}
+
+#atc03 .dining_list ul li:hover .img_wrap:before {
+    opacity: .75
+}
+
+#atc03 .dining_list ul li .img {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover
+}
+
+#atc03 .dining_list ul li .cont {
+    position: absolute;
+    opacity: 0;
+    left: 57px;
+    bottom: 29px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #fff;
+    transition: all .3s
+}
+
+#atc03 .dining_list ul li:hover .cont {
+    opacity: 1;
+    bottom: 59px
+}
+
+#atc03 .dining_list ul li .cont span {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .8)
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+
+    /* Header & General */
+    header {
+        min-width: 100%;
+    }
+
+    /* Main Visual */
+    #mainVisual .txt02 {
+        font-size: 50px;
+        line-height: normal;
+    }
+
+    #mainVisual .txt03 {
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    /* Booking Form */
+    #booking .book-wrap {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #booking .book-inner {
+        padding: 20px;
+    }
+
+    #booking .booking-form {
+        flex-direction: column;
+    }
+
+    #booking .field-group {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    #booking .btn-search {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Sections */
+    #atc01 .inner,
+    #atc03 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #atc01 .txt_area .b_eng {
+        float: none;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #atc01 .txt_area .k_txt {
+        float: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #atc01 .business_area {
+        flex-direction: column;
+    }
+
+    #atc01 .business_area li {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Business Area Colors */
+    #atc01 .business_area li:nth-child(1) a,
+    #atc01 .business_area li:nth-child(2) a {
+        color: #605c58;
+    }
+
+    /* Dining */
+    #atc03 .dining_list ul li {
+        width: 100%;
+        /* Stack vertically on mobile */
+        margin-bottom: 20px;
+    }
+
+    #atc03 .dining_list ul li .img {
+        height: 350px;
+    }
+}
